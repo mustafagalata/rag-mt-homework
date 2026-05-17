@@ -11,7 +11,7 @@ model:
 data:
   dataset: "wmt16"
   config: "tr-en"
-  train_subset_size: 50000
+  train_subset_size: null        # null = full train set (~205K)
   test_subset_size: 500       # her yön için; toplam 1000
   seed: 42
   max_src_tokens: 150         # daha uzun cümleleri filtrele

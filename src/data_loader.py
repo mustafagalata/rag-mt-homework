@@ -46,10 +46,11 @@ def preprocess_split(raw_split, min_tokens: int, max_tokens: int) -> list[dict]:
     return pairs
 
 
-def create_subset(pairs: list[dict], n: int, seed: int) -> list[dict]:
-    rng = random.Random(seed)
-    if n >= len(pairs):
+def create_subset(pairs: list[dict], n: int | None, seed: int) -> list[dict]:
+    """n=None ise listenin tamamını döndürür (full set)."""
+    if n is None or n >= len(pairs):
         return list(pairs)
+    rng = random.Random(seed)
     return rng.sample(pairs, n)
 
 
