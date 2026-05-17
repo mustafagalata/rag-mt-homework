@@ -1,22 +1,12 @@
-# Core ML / inference
-torch>=2.1.0
-transformers>=4.45.0
-accelerate>=0.27.0
-bitsandbytes>=0.43.0
-
-# Dataset
-datasets>=2.20.0
-
-# Embeddings & RAG
-sentence-transformers>=3.0.0
+transformers
+accelerate
+bitsandbytes
+datasets
+sentence-transformers
 faiss-cpu>=1.8.0
-
-# Evaluation
-unbabel-comet>=2.2.0
-
-# Utilities
-pyyaml>=6.0
-numpy>=1.24.0
-pandas>=2.0.0
-tqdm>=4.66.0
-scipy>=1.11.0
+unbabel-comet
+pyyaml
+numpy
+pandas
+tqdm
+scipy
