@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data & model files (Drive'da tutulacak)
+data/raw/
+data/processed/
+*.jsonl
+*.json
+indices/
+*.faiss
+*.index
+
+# Model cache
+cache/
+*.bin
+*.safetensors
+*.gguf
+
+# Results (Drive'da tutulacak)
+experiments/results/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Extracted PDF text (geçici)
+article_text.txt

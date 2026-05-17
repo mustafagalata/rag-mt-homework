@@ -1,0 +1,44 @@
+model:
+  name: "Qwen/Qwen2.5-7B-Instruct"
+  load_in_4bit: true
+  device_map: "auto"
+  max_new_tokens_translation: 150
+  max_new_tokens_mining: 256
+  max_new_tokens_selection: 10
+  temperature: 0.0
+  do_sample: false
+
+data:
+  dataset: "wmt16"
+  config: "tr-en"
+  train_subset_size: 50000
+  test_subset_size: 500       # her yön için; toplam 1000
+  seed: 42
+  max_src_tokens: 150         # daha uzun cümleleri filtrele
+  min_src_tokens: 3
+
+rag:
+  embedding_model: "intfloat/multilingual-e5-base"
+  embedding_dim: 768
+  top_k: 5
+  batch_size_embed: 64        # embedding için batch boyutu
+
+maps:
+  selection_method: "llm_scq" # llm_scq | comet_qe
+  n_mining_shots: 5           # knowledge mining exemplar sayısı
+
+evaluation:
+  comet_model: "Unbabel/wmt22-comet-da"
+  comet_batch_size: 8
+
+# Colab'da Google Drive mount sonrası kök
+base_dir: "/content/drive/MyDrive/RAG_Project"
+
+paths:
+  data_dir: "/content/drive/MyDrive/RAG_Project/data"
+  index_dir: "/content/drive/MyDrive/RAG_Project/indices"
+  results_dir: "/content/drive/MyDrive/RAG_Project/results"
+  cache_dir: "/content/drive/MyDrive/RAG_Project/cache"
+
+benchmark:
+  n_sentences: 50             # ön benchmark için örnek sayısı
