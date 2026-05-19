@@ -57,7 +57,7 @@ def create_subset(pairs: list[dict], n: int | None, seed: int) -> list[dict]:
 def load_wmt16_splits(config: dict, cache_dir: Optional[str] = None) -> dict:
     """
     Döndürür:
-        train      : RAG corpus için 50 000 çift (train'den)
+        train      : RAG corpus için tüm train seti (~205K çift, train_subset_size=null)
         test_en2tr : değerlendirme için 500 çift, EN kaynak
         test_tr2en : değerlendirme için 500 çift, TR kaynak
                      (iki yön arasında çakışma yok)
