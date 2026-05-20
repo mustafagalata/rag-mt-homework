@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 logger = logging.getLogger(__name__)
 
 # ──────────────────────────────────────────────────────────────────────────────
-# 5-shot exemplars (makale dipnot 1: her mining adımı için manuel hazırlanmış)
+# 5-shot exemplars
 # EN→TR ve TR→EN için ayrı exemplar setleri
 # ──────────────────────────────────────────────────────────────────────────────
 
